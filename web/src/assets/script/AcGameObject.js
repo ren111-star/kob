@@ -3,7 +3,7 @@ const AC_GAME_OBJECTS = [];  // 存储所有游戏变量
 export class AcGameObject {  // 定义基类
     constructor() {  // 构造函数 
         AC_GAME_OBJECTS.push(this);
-        this.timedelta = 0;
+        this.timedelta = 0;  // 每一帧消耗的时间
         this.has_called_start = false;
     }
 

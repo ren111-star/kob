@@ -1,7 +1,8 @@
 <template>
     <div ref="parent" class="gamemap">
         <!-- 画布 -->
-        <canvas ref="canvas">
+        <!-- tabindex 捕获键盘操作 -->
+        <canvas ref="canvas" tabindex="0">
 
         </canvas>
     </div>
