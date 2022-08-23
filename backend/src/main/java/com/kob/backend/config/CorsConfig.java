@@ -22,7 +22,6 @@ public class CorsConfig implements Filter {
         String headers = request.getHeader("Access-Control-Request-Headers");
         if(headers!=null) {
             response.setHeader("Access-Control-Allow-Headers", headers);
-            response.setHeader("Access-Control-Expose-Headers", headers);
         }
 
         response.setHeader("Access-Control-Allow-Methods", "*");
