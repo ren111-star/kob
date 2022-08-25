@@ -7,10 +7,57 @@
 import NavBar from '@/components/NavBar.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap"
+// import $ from 'jquery'
 
 export default {
-  components: {
+  components:{
     NavBar
+  },
+  setup() {
+    // $.ajax({
+    //   url: "http://127.0.0.1:3000/user/account/token/",
+    //   type: "post",
+    //   data: {
+    //     username: "yxc",
+    //     password: 'pyxc',
+    //   },
+    //   success(resp) {
+    //     console.log(resp);
+    //   },
+    //   error(resp) {
+    //     console.log(resp);
+    //   }
+    // });
+
+    // $.ajax({
+    //   url: "http://127.0.0.1:3000/user/account/info/",
+    //   type: "get",
+    //   headers: {
+    //     Authorization: "Bearer " + "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1ZDQ0NGM3N2UxNDY0YjVmOTg5NGI3YjBjNGE4ZjljZiIsInN1YiI6IjEiLCJpc3MiOiJzZyIsImlhdCI6MTY2MTM0Nzk1NiwiZXhwIjoxNjYyNTU3NTU2fQ.iZUAw995o4Rn8lW16r0IuQjC3F3XQqmmlyPWfxKkyEs"
+    //   },
+    //   success(resp) {
+    //     console.log(resp);
+    //   },
+    //   error(resp) {
+    //     console.log(resp);
+    //   }
+    // });
+
+    // $.ajax({
+    //   url: "http://127.0.0.1:3000/user/account/register/",
+    //   type: "post",
+    //   data: {
+    //     username: "yxc",
+    //     password: "123",
+    //     confirmedPassword: "123"
+    //   },
+    //   success(resp) {
+    //     console.log(resp);
+    //   },
+    //   error(resp) {
+    //     console.log(resp);
+    //   }
+    // })
   }
 }
 </script>
