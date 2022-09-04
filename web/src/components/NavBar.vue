@@ -16,6 +16,9 @@
         <li class="nav-item">
           <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'ranklist_index'}">record</router-link>
         </li>
+        <li class="nav-item">
+          <router-link :class="route_name == 'vip' ? 'nav-link active' : 'nav-link'" :to="{name: 'vip'}">users</router-link>
+        </li>
       </ul>
       <ul class="navbar-nav" v-if="$store.state.user.is_login">
         <li class="nav-item dropdown">

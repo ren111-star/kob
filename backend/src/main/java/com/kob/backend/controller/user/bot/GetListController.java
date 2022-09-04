@@ -1,4 +1,4 @@
-package com.kob.backend.controller.user.account;
+package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.service.user.bot.GetListService;

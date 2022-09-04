@@ -5,6 +5,7 @@ import RanklistIndexView from '../views/ranklist/RanklistIndexView'
 import UserBotIndexView from '../views/user/bots/UserBotIndexView'
 import NotFound from '../views/error/NotFoundView'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
+import VipAccountView from '../views/user/account/VipAccountView'
 import UserAccountRegisterview from '../views/user/account/UserAccountRegisterView'
 import store from '../store/index'
 
@@ -13,6 +14,14 @@ const routes = [
     path: "/",
     name: "home",
     redirect: "/pk/",
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/vip/",
+    name: "vip",
+    component: VipAccountView,
     meta: {
       requestAuth: true,
     }

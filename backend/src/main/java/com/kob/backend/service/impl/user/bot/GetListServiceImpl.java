@@ -1,4 +1,4 @@
-package com.kob.backend.service.impl.user.account;
+package com.kob.backend.service.impl.user.bot;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.BotMapper;
