@@ -12,6 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Player {
     private Integer id;
+    private Integer botId;  // -1 表示亲自出马，否则表示AI打
+    private String botCode;
     private Integer sx;
     private Integer sy;
     private List<Integer> steps;  // steps for each snake

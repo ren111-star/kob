@@ -84,7 +84,7 @@
                                                         <div class="mb-3">
                                                             <label for="add-bot-content" class="form-label">content</label>
                                                             <VAceEditor
-                                                                v-model:value="botadd.content"
+                                                                v-model:value="bot.content"
                                                                 @init="editorInit"
                                                                 lang="c_cpp"
                                                                 theme="textmate"
@@ -201,7 +201,7 @@ export default {
         }
 
         const update_bot = (bot) => {
-            bot.error_message = "",
+            botadd.error_message = "",
             $.ajax({
                 url: "http://127.0.0.1:3000/user/bot/update/",
                 type: "post",

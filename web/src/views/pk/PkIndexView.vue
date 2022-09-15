@@ -21,6 +21,9 @@ export default {
     setup() {
         const store = useStore();
         const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
+        store.commit("updateLoser", "none");
+        store.commit("updateIsRecord", false);
+
         let socket = null;
         onMounted(() => {
             // 创建一个连接
@@ -57,7 +60,6 @@ export default {
                     snake1.set_direction(data.b_direction);
                 } else if (data.event === "result") {
                     console.log(data);
-                    store.commit("updateLoser", data.loser);
                     const game = store.state.pk.gameObject;
                     const [snake0, snake1] = game.snakes;
 
@@ -68,6 +70,7 @@ export default {
                     if (data.loser === "all" || data.loser === "B") {
                         snake1.status = "die";
                     }
+                    store.commit("updateLoser", data.loser);
                 }
             }
 

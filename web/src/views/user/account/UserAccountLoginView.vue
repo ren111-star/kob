@@ -65,7 +65,6 @@ export default {
                     })
                 },
                 error() {
-                    // console.log(resp);
                     error_message.value = "用户名或密码错误";
                 }
             })

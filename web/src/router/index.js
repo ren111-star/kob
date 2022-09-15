@@ -6,6 +6,7 @@ import UserBotIndexView from '../views/user/bots/UserBotIndexView'
 import NotFound from '../views/error/NotFoundView'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import VipAccountView from '../views/user/account/VipAccountView'
+import RecordContentView from '../views/record/RecordContentView'
 import UserAccountRegisterview from '../views/user/account/UserAccountRegisterView'
 import store from '../store/index'
 
@@ -16,6 +17,14 @@ const routes = [
     redirect: "/pk/",
     meta: {
       requestAuth: true,
+    }
+  },
+  {
+    path: "/record/:recordId/",
+    name: "record_content",
+    component: RecordContentView,
+    meta: {
+      requestAuth: false
     }
   },
   {

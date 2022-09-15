@@ -11,13 +11,13 @@
           <router-link :class="route_name == 'pk_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'pk_index'}">PK</router-link>
         </li>
         <li class="nav-item">
-          <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'record_index'}">ranklist</router-link>
+          <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'record_index'}">record</router-link>
         </li>
         <li class="nav-item">
-          <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'ranklist_index'}">record</router-link>
+          <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'ranklist_index'}">ranklist</router-link>
         </li>
         <li class="nav-item">
-          <router-link :class="route_name == 'vip' ? 'nav-link active' : 'nav-link'" :to="{name: 'vip'}">users</router-link>
+          <router-link :class="route_name == 'vip' ? 'nav-link active' : 'nav-link'" :to="{name: 'vip'}" style="display: none">users</router-link>
         </li>
       </ul>
       <ul class="navbar-nav" v-if="$store.state.user.is_login">
