@@ -73,9 +73,6 @@ export default {
             $.ajax({
                 url: "http://127.0.0.1:3000/record/getlist/",
                 type: "get",
-                headers: {
-                    Authorization: "Bearer " + store.state.user.token,
-                },
                 data: {
                     page,
                 },

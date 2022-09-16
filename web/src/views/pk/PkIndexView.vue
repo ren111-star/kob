@@ -2,13 +2,15 @@
     <ResultBord v-if="$store.state.pk.loser != 'none' "/>
     <PlayGround v-if="$store.state.pk.status === 'playing'"/>
     <MatchGround v-else-if="$store.state.pk.status === 'matching'"/>
+    <div class="user-color" v-if="$store.state.pk.status === 'playing' && $store.state.user.id == $store.state.pk.a_id">BLUE</div>
+    <div class="user-color" v-if="$store.state.pk.status === 'playing' && $store.state.user.id == $store.state.pk.b_id">RED</div>
 </template>
 
 <script>
 import PlayGround from '../../components/PlayGround.vue'
-import { onMounted } from 'vue';  // 当组件被挂在时使用的函数
-import { onUnmounted } from 'vue';  // 当组件被卸载时使用的函数
-import { useStore } from 'vuex';
+import { onMounted } from 'vue'  // 当组件被挂在时使用的函数
+import { onUnmounted } from 'vue'  // 当组件被卸载时使用的函数
+import { useStore } from 'vuex'
 import MatchGround from '../../components/MatchGround.vue'
 import ResultBord from '../../components/ResultBord.vue'
 
@@ -88,5 +90,10 @@ export default {
 </script>
 
 <style scoped>
-
+div.user-color {
+    text-align: center;
+    color: cornsilk;
+    font-size: 30px;
+    font-weight: bold;
+}
 </style>
