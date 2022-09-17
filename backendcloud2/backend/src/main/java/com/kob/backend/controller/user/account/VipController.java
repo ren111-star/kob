@@ -13,7 +13,7 @@ public class VipController {
     @Autowired
     VipService vipService;
 
-    @GetMapping("/user/account/vip/")
+    @GetMapping("/api/user/account/vip/")
     public List<User> gteAllUsers() {
         return vipService.SelectAllUsers();
     }
